@@ -11,13 +11,11 @@ function showHidePassword() {
   }
 }
 
-
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const repeatedPassword = document.getElementById("repeated-password");
-
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -31,7 +29,6 @@ function checkInputs() {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const repeatedPasswordValue = repeatedPassword.value.trim();
-
 
   if (usernameValue === "") {
     setErrorFor(username, "Username cannot be blank");
@@ -62,7 +59,6 @@ function checkInputs() {
   }
 }
 
-
 function setErrorFor(input, message) {
   const formControl = input.parentElement; //.form-control
   const errorMsg = formControl.querySelector(".message");
@@ -79,5 +75,6 @@ function setErrorFor(input) {
 }
 
 function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      .test(email);
 }
