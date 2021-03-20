@@ -13,13 +13,13 @@ body {
 
 .container {
   width: 90vw;
-  max-width: 500px;
+  max-width: 450px;
   max-height: 700px;
   border: 1px solid rgba(0, 0, 0, .125);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, .125);
   background-color: #fff;
   margin: auto;
-  padding: 1rem;
+  padding: 1.625rem;
   transform: translateY(12%);
 }
 
@@ -51,6 +51,7 @@ input.signup--form--input {
   padding-left: 28px;
   color: #736c67;
   line-height: 20px;
+  outline: 0;
 }
 
 input.signup--form--input::placeholder,
@@ -61,7 +62,19 @@ input.signup--form--input::placeholder,
 i.fa {
   position: relative;
   top: -35px;
-  ;
+}
+
+i.fa.validation {
+  position: relative;
+  top: -35px;
+  left: 90%;
+  display: none;
+}
+
+.message {
+  font-size: small;
+  position: relative;
+  top: -20px;
 }
 
 .signup--form--submit {
@@ -96,6 +109,30 @@ i.fa {
   color: #057760;
   text-decoration: none;
 }
+
+/* Form validation */
+/* Success */
+.form-control.success input {
+  border-bottom: 2px solid #2ecc71;
+}
+
+/* Error */
+.form-control.error input {
+  border-bottom: 2px solid #e74c3c;
+}
+
+
+.form-control .validation.success {
+  display: inline;
+  color: #2ecc71;
+}
+
+.form-control .validation.error {
+  display: inline;
+  color: #e74c3c;
+}
+
+/* Form validation */
 
 @media screen and (min-width:768px) {
 

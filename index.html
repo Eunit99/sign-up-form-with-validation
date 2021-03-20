@@ -30,18 +30,43 @@
           It's free and hardly takes more than 30 seconds.
         </div>
         <div class="signup--form">
-          <form action="">
-            <input type="text" name="username" class="signup--form--input" placeholder="Username">
-            <i class="fa fa-user"></i>
 
-            <input type="email" name="email" class="signup--form--input" placeholder="Email Address">
-            <i class="fa fa-paper-plane"></i>
+          <form action="" class="form" id="form">
 
-            <input type="password" name="password" class="signup--form--input" placeholder="Password">
-            <i class="fa fa-key"></i>
+            <div class="form-control">
+              <input id="username" type="text" name="username" class="signup--form--input" placeholder="Username" required>
+              <i class="fa fa-user"></i>
+              <i class="fa fa-check-circle validation"></i>
+              <i class="fa fa-exclamation-circle validation"></i>
+              <p class="message"></p>
+            </div>
 
-            <input type="password" name="-repeated-password" class="signup--form--input" placeholder="Confirm Password">
-            <i class="fa fa-key"></i>
+            <div class="form-control">
+              <input id="email" type="email" name="email" class="signup--form--input" placeholder="Email Address"
+                required>
+              <i class="fa fa-paper-plane"></i>
+              <i class="fa fa-check-circle validation"></i>
+              <i class="fa fa-exclamation-circle validation"></i>
+              <p class="message"></p>
+            </div>
+
+            <div class="form-control">
+              <input id="password" type="password" name="password" class="signup--form--input" id="password"
+                placeholder="Password" required>
+              <i class="fa fa-key" id="passSwitch" onclick="showHidePassword()"></i>
+              <i class="fa fa-check-circle validation"></i>
+              <i class="fa fa-exclamation-circle validation"></i>
+              <p class="message"></p>
+            </div>
+
+            <div class="form-control">
+              <input id="repeated-password" type="password" name="repeated-password" class="signup--form--input"
+                placeholder="Confirm Password" required>
+              <i class="fa fa-key"></i>
+              <i class="fa fa-check-circle validation"></i>
+              <i class="fa fa-exclamation-circle validation"></i>
+              <p class="message"></p>
+            </div>
 
             <button class="signup--form--submit t-center">Sign Up</button>
           </form>
@@ -53,7 +78,7 @@
       </div>
 
     </div>
-    <script src="js/script.js" async defer></script>
+    <script src="js/script.js"></script>
   </body>
 
 </html>
