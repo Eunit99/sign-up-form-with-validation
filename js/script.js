@@ -11,32 +11,28 @@ function showHidePassword() {
   }
 }
 
-
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const repeatedPassword = document.getElementById("repeated-password");
 
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
-})
+});
 
 function checkInputs() {
-
   // get input values
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const repeatedPasswordValue = repeatedPassword.value.trim();
 
-
   if (usernameValue === "") {
     setErrorFor(username, "Username cannot be blank");
   } else {
-    setSuccesFor(username)
+    setSuccesFor(username);
   }
 
   if (emailValue === "") {
@@ -44,13 +40,13 @@ function checkInputs() {
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, "Email is not valid");
   } else {
-    setSuccesFor(email)
+    setSuccesFor(email);
   }
 
   if (passwordValue === "") {
     setErrorFor(password, "Password cannot be blank");
   } else {
-    setSuccesFor(password)
+    setSuccesFor(password);
   }
 
   if (repeatedPasswordValue === "") {
@@ -58,10 +54,9 @@ function checkInputs() {
   } else if (repeatedPasswordValue !== passwordValue) {
     setErrorFor(repeatedPasswordValue, "Repeated password does not match");
   } else {
-    setSuccesFor(repeatedPasswordValue)
+    setSuccesFor(repeatedPasswordValue);
   }
 }
-
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement; //.form-control
@@ -79,5 +74,7 @@ function setErrorFor(input) {
 }
 
 function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
 }
