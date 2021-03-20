@@ -11,7 +11,6 @@ function showHidePassword() {
   }
 }
 
-
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
@@ -21,10 +20,9 @@ const repeatedPassword = document.getElementById("repeated-password");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
-})
+});
 
 function checkInputs() {
-
   // get input values
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
@@ -32,13 +30,31 @@ function checkInputs() {
   const repeatedPasswordValue = repeatedPassword.value.trim();
 
   if (usernameValue === "") {
-    // show some error
-
     setErrorFor(username, "Username cannot be blank");
-    // add error class
   } else {
-    // add success class
-    setSuccesFor(username)
+    setSuccesFor(username);
+  }
+
+  if (emailValue === "") {
+    setErrorFor(email, "Email cannot be blank");
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(email, "Email is not valid");
+  } else {
+    setSuccesFor(email);
+  }
+
+  if (passwordValue === "") {
+    setErrorFor(password, "Password cannot be blank");
+  } else {
+    setSuccesFor(password);
+  }
+
+  if (repeatedPasswordValue === "") {
+    setErrorFor(repeatedPasswordValue, "Repeated password cannot be blank");
+  } else if (repeatedPasswordValue !== passwordValue) {
+    setErrorFor(repeatedPasswordValue, "Repeated password does not match");
+  } else {
+    setSuccesFor(repeatedPasswordValue);
   }
 }
 
@@ -49,5 +65,16 @@ function setErrorFor(input, message) {
 
   // add error class
   formControl.className = "form-control error";
-  alert("Error");
+  console.log(message);
+}
+
+function setErrorFor(input) {
+  const formControl = input.parentElement; //.form-control
+  formControl.className = "form-control success";
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
 }
