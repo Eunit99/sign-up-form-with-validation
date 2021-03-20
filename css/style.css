@@ -6,16 +6,94 @@
 
 body {
   background-color: #f5f5f5;
+  color: #736c67;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
   width: 90vw;
   height: 80vh;
   max-width: 500px;
-  max-height: 500px;
+  max-height: 700px;
   border: 1px solid rgba(0, 0, 0, .125);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, .125);
   background-color: #fff;
   margin: auto;
-  transform: translateY(15%);
+  padding: 1rem;
+  transform: translateY(12%);
+}
+
+.container .t-center {
+  text-align: center;
+}
+
+.signup--header-title {
+  font-weight: 400;
+  margin-bottom: .625rem;
+}
+
+.signup--description {
+  font-size: 14px;
+  color: #bbb8bb;
+  margin-bottom: 1.425rem;
+}
+
+.signup--form {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+input.signup--form--input {
+  border: 0;
+  width: 100%;
+  border-bottom: 1px solid #bbb8bba2;
+  padding: 10px 18px;
+  padding-left: 28px;
+  color: #736c67;
+  line-height: 20px;
+}
+
+input.signup--form--input::placeholder,
+.signup-form--agreement {
+  color: #bbb8bb;
+}
+
+i.fa {
+  position: relative;
+  top: -35px;
+  ;
+}
+
+.signup--form--submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #19aa8d;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  font-weight: 600;
+  font-size: 1.115rem;
+  border-radius: 2px;
+  margin-top: 1.115rem;
+  transition: background-color .6s linear;
+}
+
+.signup--form--submit:hover {
+  background-color: #057760;
+}
+
+.signup-form--agreement {
+  font-size: small;
+  margin: 1rem auto;
+}
+
+.agreement-link {
+  color: #19aa8d;
+  text-decoration: none;
+}
+
+.agreement-link:hover {
+  color: #057760;
+  text-decoration: none;
 }

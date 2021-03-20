@@ -12,6 +12,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
   </head>
 
   <body>
@@ -22,22 +23,30 @@
 
     <div class="container">
       <div class="signup">
-        <h1 class="signup--header-title">
+        <h1 class="signup--header-title t-center">
           Create Account
         </h1>
-        <div class="signup--description">
-          It's free and hardly takes more than 30 seconds
+        <div class="signup--description t-center">
+          It's free and hardly takes more than 30 seconds.
         </div>
         <div class="signup--form">
           <form action="">
             <input type="text" name="username" class="signup--form--input" placeholder="Username">
+            <i class="fa fa-user"></i>
+
             <input type="email" name="email" class="signup--form--input" placeholder="Email Address">
+            <i class="fa fa-paper-plane"></i>
+
             <input type="password" name="password" class="signup--form--input" placeholder="Password">
-            <input type="password" name="-repeated-password" class="signup--form--input" placeholder="confirm Password">
-            <button class="signup--form--submit">Sign up</button>
+            <i class="fa fa-key"></i>
+
+            <input type="password" name="-repeated-password" class="signup--form--input" placeholder="Confirm Password">
+            <i class="fa fa-key"></i>
+
+            <button class="signup--form--submit t-center">Sign Up</button>
           </form>
         </div>
-        <div class="signup-form--agreement">
+        <div class="signup-form--agreement t-center">
           By clicking the Sign Up button, you agree to our <a href="#" class="agreement-link">Terms & Conditions</a>,
           and <a href="#" class="agreement-link">Privacy Policy</a>
         </div>
