@@ -13,7 +13,6 @@ body {
 
 .container {
   width: 90vw;
-  height: 80vh;
   max-width: 500px;
   max-height: 700px;
   border: 1px solid rgba(0, 0, 0, .125);
@@ -96,4 +95,21 @@ i.fa {
 .agreement-link:hover {
   color: #057760;
   text-decoration: none;
+}
+
+@media screen and (min-width:768px) {
+
+  .container {
+    transform: translateY(25%);
+    padding: 3rem 2rem 1rem;
+  }
+
+  .signup--form {
+    margin: 3rem auto;
+  }
+
+  .signup--form--submit {
+    padding: 14px;
+    margin-top: 1.115rem;
+  }
 }
