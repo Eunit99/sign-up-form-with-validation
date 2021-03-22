@@ -66,9 +66,14 @@ i.fa {
 
 i.fa.validation {
   position: relative;
-  top: -35px;
   left: 90%;
   display: none;
+}
+
+i.fa.validation,
+i.fa.switch {
+  position: relative;
+  left: 90%;
 }
 
 .message {

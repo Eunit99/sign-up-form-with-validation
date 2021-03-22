@@ -5,9 +5,13 @@ function showHidePassword() {
   if (inputPass.type === "password") {
     inputPass.type = "text";
     passSwitcher.style.color = "#057760";
+    passSwitcher.classList.remove("fa-eye");
+    passSwitcher.classList.add("fa-eye-slash");
   } else {
     inputPass.type = "password";
     passSwitcher.style.color = "#736c67";
+    passSwitcher.classList.add("fa-eye");
+    passSwitcher.classList.remove("fa-eye-slash");
   }
 }
 
